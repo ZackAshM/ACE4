@@ -1,0 +1,16 @@
+# create OpenGL context
+/vis/open OGL
+
+# draw volume and configure scene
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/add/hits
+
+# set view point
+/vis/viewer/set/upVector 1 0 0
+/vis/viewer/set/viewpointVector 0 1 0
+/vis/viewer/zoomTo 10
+/vis/scene/add/axes 0 0 0 5 cm
+
+# load beam settings
+#/control/execute beam.mac

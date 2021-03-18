@@ -1,0 +1,51 @@
+# this creates particles simultaneously from each source
+/gps/source/multiplevertex true
+
+### FORWARD SOURCE
+########################################
+
+# create the first source - argument is intensity in candela
+/gps/source/add 1.0
+
+# make the first source active
+/gps/source/set 0
+
+# set the beam to protons
+/gps/particle proton
+
+# set the energy to 10TeV
+/gps/energy 10 TeV
+
+# set origin outside of interaction region
+/gps/position 0 0 -0.25 m
+
+# set focus point
+/gps/ang/focuspoint 0 0 0 mm
+
+# fire them along the z-axis
+/gps/direction 0 0 1
+
+
+### BACKWARD SOURCE
+########################################
+
+# create the second source - argument is intensity in candela
+/gps/source/add 1.0
+
+# make the second source active
+/gps/source/set 1
+
+# set the beam to protons
+/gps/particle proton
+
+# set the energy to 10TeV
+/gps/energy 10 TeV
+
+# set origin outside of interaction region
+/gps/position 0 0 1 m
+
+# set focus point
+/gps/ang/focuspoint 0 0 0 mm
+
+# fire them along the -z-axis
+/gps/direction 0 0 -1

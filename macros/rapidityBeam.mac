@@ -1,0 +1,31 @@
+# this macro sets the position and direction of the beam
+# and is meant to run through a loop for different
+# rapidity angles using rapidityRun.mac
+
+# this creates particles simultaneously from each source
+/gps/source/multiplevertex true
+
+# create the first source - argument is intensity in candela
+/gps/source/add 1.0
+
+# make the first source active
+/gps/source/set 0
+
+# set the beam to protons
+/gps/particle e-
+
+# set the energy to 10TeV
+/gps/energy 14.6 GeV
+
+# set origin outside of interaction region
+/gps/position 0 {y} -0.25 m
+
+# set focus point
+/gps/ang/focuspoint 0 0 0 mm
+
+# fire them along the z-axis
+/gps/direction 0 -{y} 0.25
+
+# run
+/run/printProgress 1000
+/run/beamOn 10000

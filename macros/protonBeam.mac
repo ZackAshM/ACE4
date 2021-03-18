@@ -1,0 +1,31 @@
+/run/initialize
+
+# /analysis/setFileName sim100.ROOT
+
+# this creates particles simultaneously from each source
+# /gps/source/multiplevertex true
+
+# create the first source - argument is intensity in candela
+#/gps/source/add 1.0
+
+# make the first source active
+#/gps/source/set 0
+
+# set the beam to protons
+/gps/particle proton
+
+# set the energy
+/gps/energy 100 GeV
+
+# set origin outside of interaction region
+/gps/position 0 0 0 m
+
+# set focus point
+#/gps/ang/focuspoint 0 0 0 mm
+
+# fire them along the z-axis
+/gps/direction 0 0 0.25
+
+# run
+#/run/printProgress 1000
+/run/beamOn 1

@@ -1,0 +1,7 @@
+# this macro should be executed to loop over different
+# rapidity angles by changing the beam position and direction
+
+# Assuming the beam z position is fixed at -0.25 m,
+# this loop will run over the following rapidity angles:
+# 5 15 25 35 45 55 65 75 85 90
+/control/foreach rapidityBeam.mac y "2.8575 0.93301 0.53613 0.35704 0.25 0.17505 0.11658 0.066987 0.021872 0"
